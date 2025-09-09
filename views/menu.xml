@@ -1,0 +1,26 @@
+<odoo>
+    <!-- Root Menu -->
+    <menuitem id="menu_crm_custom_root"
+              name="CRM Custom"
+              sequence="10"/>
+
+    <!-- Alt Menü -->
+    <menuitem id="menu_crm_custom_leads"
+              name="Leads with Satisfaction"
+              parent="menu_crm_custom_root"
+              action="crm.crm_lead_action_pipeline"/>
+
+    <!-- Custom Action -->
+    <record id="action_addon2_custom" model="ir.actions.act_window">
+        <field name="name">Custom Records</field>
+        <field name="res_model">crm.lead</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <!-- Custom Menu for Action -->
+    <menuitem id="menu_addon2_custom" 
+              name="Custom Records" 
+              parent="menu_crm_custom_root" 
+              action="action_addon2_custom"/>
+</odoo>

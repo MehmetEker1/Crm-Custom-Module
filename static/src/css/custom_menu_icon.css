@@ -1,0 +1,4 @@
+.o_menu_text:contains('CRM Custom') {
+    background: url('addon_2/static/description/icon.png') no-repeat left center;
+    padding-left: 40px;
+}
